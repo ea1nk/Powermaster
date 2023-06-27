@@ -2,7 +2,7 @@
 
 2023 SCQ Devices - EA1NK
 
-### Basic NodeJS class to remote control a PowerMaster VSWR Meter via web interface
+### Basic NodeJS class to remote control an Array Solutions PowerMaster VSWR Meter via web interface
 
 Usage:
 ```
