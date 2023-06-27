@@ -1,0 +1,1 @@
+# Powermaster NodeJS class
