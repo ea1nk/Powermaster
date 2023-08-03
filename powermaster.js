@@ -1,8 +1,10 @@
-const SerialPort = require("serialport");
+const {SerialPort} = require("serialport");
+const { ReadlineParser } = require('@serialport/parser-readline');
 
 class PowerMaster {
   constructor(serialPortPath, baudRate) {
     this.serialPort = new SerialPort(serialPortPath, { baudRate });
+    this.parser = this.serialPort.pipe(new ReadlineParser({ delimiter: '\r' }));
     this.serialPort.on("data", this.handleReceivedData.bind(this));
   }
 
